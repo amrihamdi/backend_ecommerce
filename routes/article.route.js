@@ -5,7 +5,7 @@ const Scategorie =require("../models/scategorie")
 const {verifyToken} =require("../middeleware/verify-token");
 
 // afficher la liste des articles.
-router.get('/',verifyToken, async (req, res, )=> {
+router.get('/', async (req, res, )=> {
 try {
 const articles = await Article.find({}, null, {sort: {'_id': -
 1}}).populate("scategorieID").exec();
